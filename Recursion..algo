@@ -1,0 +1,25 @@
+FUNCTION palndrome( i:INTEGER, j:INTEGER,mot:STRING):BOOLEAN
+VAR
+    left:STRING;
+    right:STRING
+BEGIN
+    i:=0;
+    j=mot.lenght;
+    left:=mot[i];
+    right:=mot[j]
+    IF (left="" or right="") THEN
+        RETURN true
+    ELSE_if(mot[i]=mot[j])
+        RETURN palndrome(i-1,j-1,mot);
+    else
+        RETURN false
+    END_IF
+END
+ALGORITHM palandrome
+VAR
+    mot:STRING;
+    i:INTEGER;
+    j:INTEGER;
+BEGIN
+    palndrome(i,j,mot)
+END
